@@ -2,14 +2,14 @@ package tn.esprit.gestionzoo.entities;
 
 public class Terrestre extends Animal {
 
-private int nbrLegs;
+    private int nbrLegs;
 
-    public Terrestre (String family, String name, int age, boolean isMammal, int nbrLegs) {
+    public Terrestre(String family, String name, int age, boolean isMammal, int nbrLegs) {
 
-        super(family,name,age,isMammal);
-        this.nbrLegs= nbrLegs;
+        super(family, name, age, isMammal);
+        this.nbrLegs = nbrLegs;
 
-}
+    }
 
     public int getNbrLegs() {
         return nbrLegs;
@@ -18,8 +18,14 @@ private int nbrLegs;
     public void setNbrLegs(int nbrLegs) {
         this.nbrLegs = nbrLegs;
     }
-    public String toString(){
-        return (super.toString()+nbrLegs);
 
+    public String toString() {
+        return "Aquatic{" +
+                "family='" + getFamily() + '\'' +
+                ", name='" + getName() + '\'' +
+                ", age=" + getAge() +
+                ", isMammal=" + isMammal() +
+                ",nbrLegs=" + nbrLegs +
+                '}';
     }
 }

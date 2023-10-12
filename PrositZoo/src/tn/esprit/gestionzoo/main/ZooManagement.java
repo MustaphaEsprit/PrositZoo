@@ -44,11 +44,14 @@ public class ZooManagement {
         // Check if myZoo is full
         System.out.println("Is myZoo Full? " + myZoo.isZooFull());  // false
 
-        Aquatique A = new Aquatique ("string","string",4,false,"string");
+        Aquatic A = new Aquatic("string","string",4,false,"string");
         Terrestre T = new Terrestre("string","string",4,false,4);
         Dolphin D = new Dolphin("string","string",4,false,"string",4.0f);
         Penguin P = new Penguin("string","string",4,false,"string",4.0f);
 
-    }
+        A.swim(); // Classe mere dans laquelle la methode a ete implemente
+        D.swim();  //Cette methode a ete implemente dans cette classe (redefinition)
+        P.swim(); // Classe fille qui  herite l methode swim() de sa classe mere Aquatic
 
+    }
 }
